@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="style-v01.css" />
   </head>
   <body>
+    <div class="overlay-popup" onclick="closePopup()"></div>
     <header class="header pr ">
         <div class="top-links bg-grdnt-01">
           <div class="wrapper v-center jcsb">
@@ -281,6 +282,7 @@
             </nav>
             <div
               class="inquiry-cta ttu cp h48 bg-grdnt-02 br4 fs13 fw5 box-center plr16 fc4 ml12"
+              onclick="openPopup()"
             >
               Inquiry
             </div>
@@ -314,7 +316,32 @@
         </ul>
       </div>
     </div>
-
+    <div class="quick-form-grp pa dn">
+        <form action="" method="post" class="quick-form df fdc" onsubmit="submitPopup(event)">
+          <h2 class="fs24 fw7 fc1 tac mb24">We are here to help!</h2>
+          <input type="text" placeholder="Enter your email" class="input-text" />
+          <input
+            type="text"
+            placeholder="Enter phone number"
+            class="input-text"
+          />
+          <input type="text" placeholder="Enter name" class="input-text" />
+          <input type="text" placeholder="Enter company" class="input-text" />
+          <div class="custom-select">
+            <select name="quick-look" class="input-field select-field">
+              <option value="" disabled="" selected="">
+                Are you looking for ?
+              </option>
+              <option value="Services">Services</option>
+              <option value="Business Partnership">Business Partnership</option>
+              <option value="Jobs">Jobs</option>
+            </select>
+          </div>
+          <div class="submit-wrapper">
+            <input type="submit" value="SUBMIT" class="input-submit box-center" />
+          </div>
+        </form>
+      </div>
     <main class="pr">
       <div class="wrapper df">
         <div class="flx25 about-left-sidebar pt48 plr16">
@@ -366,7 +393,8 @@
         <div class="flx75 about-right-content ptb48 pl16">
           <section class="who-we-are">
             <div class="who-we-are-content">
-              <h2 class="fs20 fc7 fw6 lh22 ttu mb12">Who We are</h2>
+              <h2 class="fs20 fc7 fw6 lh22 ttu">Who We are</h2>
+              <span class="underline df mtb8 bg1"></span>
               <p class="lh30 fw5 mb12 fc6">
                 Vitalink healthcare is a leading medical billing company in
                 India, renowned for its comprehensive range of solutions and
@@ -422,7 +450,8 @@
           </section>
           <section class="what-we-do ptb24">
             <div class="what-we-do-content">
-              <h2 class="fs20 fc7 fw6 lh22 ttu mb12">What We Do</h2>
+              <h2 class="fs20 fc7 fw6 lh22 ttu">What We Do</h2>
+              <span class="underline df mtb8 bg1"></span>
               <p class="lh30 fw5 mb12">
                 At our company, we offer comprehensive medical billing services
                 that cover the entire process, from reducing expenses to
@@ -436,9 +465,10 @@
           </section>
           <section class="team-billing ptb24">
             <div class="team-care-content">
-              <h2 class="fs20 fc7 fw6 lh22 ttu mb12">
+              <h2 class="fs20 fc7 fw6 lh22 ttu">
                 OUR MEDICAL BILLING TEAM
               </h2>
+              <span class="underline df mtb8 bg1"></span>
               <p class="lh30 fw5 mb12">
                 Our growing team brings extensive experience, expertise and
                 dedication. With over 200 professionals, we continue to expand
@@ -698,5 +728,6 @@
       </svg>
     </div>
     <script src="script-v01.js"></script>
+
   </body>
 </html>
