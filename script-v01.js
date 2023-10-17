@@ -12,9 +12,9 @@ function handleIntersection(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // The target element is now in the viewport
-      animateValue(obj, 0, 1200, 3000);
+      animateValue(obj, 0, 200, 3000);
       animateValue(obj1, 0, 120, 3000);
-      animateValue(obj2, 0, 23, 3000);
+      animateValue(obj2, 0, 5, 3000);
       observer.unobserve(entry.target); // Stop observing once it's visible
     }
   });
