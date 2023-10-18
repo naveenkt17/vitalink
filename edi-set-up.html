@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="style-v01.css" />
   </head>
   <body>
+    <div class="overlay-popup" onclick="closePopup()"></div>
     <header class="header pr">
       <div class="top-links bg-grdnt-01">
         <div class="wrapper v-center jcsb">
@@ -316,7 +317,32 @@
         </ul>
       </div>
     </div>
-
+    <div class="quick-form-grp pa dn">
+      <form action="" method="post" class="quick-form df fdc" onsubmit="submitPopup(event)">
+        <h2 class="fs24 fw7 fc1 tac mb24">We are here to help!</h2>
+        <input type="text" placeholder="Enter your email" class="input-text" />
+        <input
+          type="text"
+          placeholder="Enter phone number"
+          class="input-text"
+        />
+        <input type="text" placeholder="Enter name" class="input-text" />
+        <input type="text" placeholder="Enter company" class="input-text" />
+        <div class="custom-select">
+          <select name="quick-look" class="input-field select-field">
+            <option value="" disabled="" selected="">
+              Are you looking for ?
+            </option>
+            <option value="Services">Services</option>
+            <option value="Business Partnership">Business Partnership</option>
+            <option value="Jobs">Jobs</option>
+          </select>
+        </div>
+        <div class="submit-wrapper">
+          <input type="submit" value="SUBMIT" class="input-submit box-center" />
+        </div>
+      </form>
+    </div>
     <main class="pr">
       <div class="wrapper df">
         <div class="flx25 about-left-sidebar ptb48 plr16">
@@ -481,7 +507,7 @@
                       <li class="p8 v-center">
                         <span class="material-symbols-outlined">
                           chevron_right </span
-                        ><a href="dental-ar-follow-ups.html" class="fc3">Denial Management</a>
+                        ><a href="dental-ar-follow-ups.html" class="fc3">Dental AR Follow Ups</a>
                       </li>
                       <li class="p8 v-center">
                         <span class="material-symbols-outlined">
@@ -699,6 +725,23 @@
         </symbol>
       </svg>
     </div>
-    <script src="script-v01.js"></script>
+    <script>
+      
+      const quickForm = document.querySelector(".quick-form-grp");
+      const overlayBg = document.querySelector(".overlay-popup");
+      const openPopup = () => {
+        quickForm.classList.add("on-pop");
+        overlayBg.classList.add("on-pop");
+      };
+      const closePopup = () => {
+        quickForm.classList.remove("on-pop");
+        overlayBg.classList.remove("on-pop");
+      };
+      const submitPopup = (e) => {
+          e.preventDefault(); 
+          quickForm.classList.remove("on-pop");
+          overlayBg.classList.remove("on-pop");
+      };
+          </script>
   </body>
 </html>
