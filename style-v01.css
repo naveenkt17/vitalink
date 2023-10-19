@@ -1733,6 +1733,9 @@ table {
   width: 115px;
   height: 3px;
 }
+.address-realted-links .links-left{
+  min-height: 288px;
+}
 /* naveen css end */
 @media screen and (max-width: 768px) {
   .top-links {

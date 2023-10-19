@@ -659,7 +659,7 @@
                       <li class="p8 v-center">
                         <span class="material-symbols-outlined">
                           chevron_right </span
-                        ><a href="#" class="fc4">Vision and Mission </a>
+                        ><a href="vision-mission.html" class="fc4">Vision and Mission </a>
                       </li>
                       <li class="p8 v-center">
                         <span class="material-symbols-outlined">
@@ -870,6 +870,34 @@
           quickForm.classList.remove("on-pop");
           overlayBg.classList.remove("on-pop");
       };
+
+      
+// accordion
+const accordionItems = document.querySelectorAll(".accordion-item");
+// Add click event listeners to each accordion button
+accordionItems.forEach((item) => {
+  const button = item.querySelector(".accordion-button");
+  const content = item.querySelector(".accordion-content");
+
+  button.addEventListener("click", () => {
+    // Check if the clicked item is already active
+    if (!item.classList.contains("active")) {
+      // Close all open sections
+      accordionItems.forEach((otherItem) => {
+        otherItem.classList.remove("active");
+        otherItem.querySelector(".accordion-content").style.display = "none";
+      });
+
+      // Open the clicked item
+      item.classList.add("active");
+      content.style.display = "block";
+    } else {
+      // Close the clicked item
+      item.classList.remove("active");
+      content.style.display = "none";
+    }
+  });
+});
           </script>
   </body>
 </html>

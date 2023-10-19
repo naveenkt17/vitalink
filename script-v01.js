@@ -12,9 +12,9 @@ function handleIntersection(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // The target element is now in the viewport
-      animateValue(obj, 0, 200, 3000);
-      animateValue(obj1, 0, 120, 3000);
-      animateValue(obj2, 0, 5, 3000);
+      animateValue(obj, 0, 200, 1000);
+      animateValue(obj1, 0, 20, 1000);
+      animateValue(obj2, 0, 5, 1000);
       observer.unobserve(entry.target); // Stop observing once it's visible
     }
   });
@@ -46,32 +46,6 @@ const obj = document.querySelector(".emp-num");
 const obj1 = document.querySelector(".cient-num");
 const obj2 = document.querySelector(".yib-num");
 
-// accordion
-const accordionItems = document.querySelectorAll(".accordion-item");
-// Add click event listeners to each accordion button
-accordionItems.forEach((item) => {
-  const button = item.querySelector(".accordion-button");
-  const content = item.querySelector(".accordion-content");
-
-  button.addEventListener("click", () => {
-    // Check if the clicked item is already active
-    if (!item.classList.contains("active")) {
-      // Close all open sections
-      accordionItems.forEach((otherItem) => {
-        otherItem.classList.remove("active");
-        otherItem.querySelector(".accordion-content").style.display = "none";
-      });
-
-      // Open the clicked item
-      item.classList.add("active");
-      content.style.display = "block";
-    } else {
-      // Close the clicked item
-      item.classList.remove("active");
-      content.style.display = "none";
-    }
-  });
-});
 
 const quickForm = document.querySelector(".quick-form-grp");
 const overlayBg = document.querySelector(".overlay-popup");
