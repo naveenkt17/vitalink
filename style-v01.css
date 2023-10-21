@@ -1397,6 +1397,18 @@ table {
   background-image: url(images/banner-bg-02.jpg);
 }
 
+.banner3 {
+  background-image: linear-gradient(rgba(62, 62, 62, 0.4) 30%,
+      rgba(75, 75, 74, 0.4) 100%),
+    url(images/banner-bg-03.jpg);
+}
+
+.banner4 {
+  background-image: linear-gradient(rgba(62, 62, 62, 0.4) 30%,
+      rgba(75, 75, 74, 0.4) 100%),
+    url(images/banner-bg-04.jpg);
+}
+
 .hero-heading {
   position: absolute;
   z-index: 2;
@@ -1432,6 +1444,7 @@ table {
 .header {
   z-index: 999;
 }
+
 .overlay-popup {
   position: fixed;
   top: 0;
@@ -1440,20 +1453,21 @@ table {
   z-index: 10000;
   background-color: rgba(1, 9, 22, 0.926);
   display: none;
- }
- 
- .quick-form-grp.on-pop {
+}
+
+.quick-form-grp.on-pop {
   right: 0;
   left: 0;
   margin: 0 auto;
   top: 120px;
   display: block;
-  z-index:10001;
- }
- 
- .overlay-popup.on-pop {
+  z-index: 10001;
+}
+
+.overlay-popup.on-pop {
   display: block;
- }
+}
+
 .quick-form-grp {
   width: 96%;
   max-width: 350px;
@@ -1583,7 +1597,13 @@ table {
 .contact-inside,
 .specialities-inside,
 .data-conversion-inside,
-.edi-inside,.dental-follow-inside {
+.edi-inside,
+.dental-follow-inside,
+.pediatrics-inside,
+.insurance-verif-inside,
+.dental-inside,
+.emergency-inside,
+.radiology-inside {
   height: calc(50vh - 96px);
   min-height: 240px;
 }
@@ -1591,6 +1611,27 @@ table {
 .hero.about-inside {
   background: url(images/about-us-lg.jpg);
 }
+
+.hero.radiology-inside {
+  background: url(images/imaging-room-or-radiology.jpg);
+}
+
+.hero.dental-inside {
+  background: url(images/denial-management.jpg);
+}
+
+.hero.emergency-inside {
+  background: url(images/emergency-room-physician-billing-services-lg.jpg);
+}
+
+.hero.pediatrics-inside {
+  background: url(images/pediatric-lg.jpg);
+}
+
+.hero.insurance-verif-inside {
+  background: url(images/insurance-quality-verification-lg.jpg);
+}
+
 .hero .overlay-inside {
   position: absolute;
   top: 0;
@@ -1628,15 +1669,18 @@ table {
   background: url(images/specialities.jpg);
 }
 
-.hero.data-conversion-inside{
+.hero.data-conversion-inside {
   background: url(images/data-conversion-lg.jpg);
 }
-.hero.edi-inside{
+
+.hero.edi-inside {
   background: url(images/edi-set-up-lg.jpg);
 }
-.hero.dental-follow-inside{
+
+.hero.dental-follow-inside {
   background: url(images/dental-ar-follow-ups.jpg);
 }
+
 .bg-grdnt-05 {
   background-image: linear-gradient(to right, #fff2d2 0, #fad595 100%);
 }
@@ -1656,12 +1700,11 @@ table {
   box-shadow: 0 0 20px rgb(0 0 0 / 10%);
 }
 
-.dental-image:before {
+.dental-image:before,.backside-image:before{
   top: 20px;
   right: 20px;
   content: '';
   width: 100%;
-  z-index: -1;
   height: 100%;
   position: absolute;
   background: url(../images/img-bg.png);
@@ -1729,13 +1772,16 @@ table {
 .service-link-content {
   min-height: 372px;
 }
+
 .underline {
   width: 115px;
   height: 3px;
 }
-.address-realted-links .links-left{
+
+.address-realted-links .links-left {
   min-height: 288px;
 }
+
 /* naveen css end */
 @media screen and (max-width: 768px) {
   .top-links {
