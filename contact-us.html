@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Contact Us</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/vitalink-favicon.png" sizes="32x32" type="image/png">
     <link
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -314,21 +317,41 @@
       </div>
     </div>
     <div class="quick-form-grp pa dn">
-      <form
-        action=""
-        method="post"
-        class="quick-form df fdc"
-        onsubmit="submitPopup(event)"
-      >
+      <form class="quick-form df fdc" id="myForm">
         <h2 class="fs24 fw7 fc1 tac mb24">We are here to help!</h2>
-        <input type="text" placeholder="Enter your email" class="input-text" />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          class="input-text"
+          required
+          autocomplete="off"
+        />
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="input-text"
+          name="email"
+          required
+          autocomplete="off"
+        />
         <input
           type="text"
           placeholder="Enter phone number"
           class="input-text"
+          required
+          autocomplete="off"
+          name="mobile"
         />
-        <input type="text" placeholder="Enter name" class="input-text" />
-        <input type="text" placeholder="Enter company" class="input-text" />
+        <input
+          type="text"
+          placeholder="Enter Location"
+          class="input-text"
+          required
+          autocomplete="off"
+          name="location"
+        />
         <div class="custom-select">
           <select name="quick-look" class="input-field select-field">
             <option value="" disabled="" selected="">
@@ -370,58 +393,65 @@
             </div>
           </section>
           <section class="contact-form">
-            <form class="mt32" action="mail.php" method="post">
-              <div class="df jcsb mb16">
+            <form class="mt32" id="myForm">
+              <div class="df jcsb mb16 mobile-input">
                 <div class="flx1 mr12">
                   <label for="name" class="db fw7 mb16">Full Name:</label>
                   <input
                     type="text"
-                    id="name"
                     name="name"
                     class="w100 br4 fs16 brd1 p16"
+                    required
+                    autocomplete="off"
                   />
                 </div>
-                <div class="flx1 mr12">
+                <div class="flx1 mr12 email">
                   <label for="email" class="db fw7 mb16">Email:</label>
                   <input
                     type="email"
-                    id="email"
                     name="email"
                     class="w100 br4 fs16 brd1 p16"
+                    required
+                    autocomplete="off"
                   />
                 </div>
               </div>
-              <div class="df jcsb mb16">
+              <div class="df jcsb mb16 mobile-input">
                 <div class="flx1 mr12">
                   <label for="number" class="db fw7 mb16">Phone Number:</label>
                   <input
                     type="text"
-                    id="number"
-                    name="number"
+                    name="mobile"
                     class="w100 br4 fs16 brd1 p16"
+                    required
+                    autocomplete="off"
                   />
                 </div>
-                <div class="flx1 mr12">
-                  <label for="location" class="db fw7 mb16">Location:</label>
+                <div class="flx1 mr12 loc">
+                  <label for="location" class="db fw7 mb16"
+                    >Location</label
+                  >
                   <input
                     type="text"
-                    id="location"
                     name="location"
                     class="w100 br4 fs16 brd1 p16"
+                    required
+                    autocomplete="off"
                   />
                 </div>
               </div>
-              <div class="df jcsb mb16">
+              <div class="df jcsb mb16 mobile-input">
                 <div class="flx1 mr12">
                   <label for="message" class="db fw7 mb16">Message:</label>
                   <textarea
-                    id="message"
                     name="message"
                     class="w100 br4 fs16 brd1 p16"
+                    required
+                    autocomplete="off"
                   ></textarea>
                 </div>
               </div>
-              <div class="df jcsb mb16">
+              <div class="df jcsb mb16 mobile-input">
                 <input
                   type="submit"
                   value="Get in touch"
@@ -431,7 +461,7 @@
             </form>
           </section>
           <section class="address-section ptb24">
-            <div class="df">
+            <div class="df rel-links">
               <div class="address-realted-links flx50">
                 <div class="p16 df links-left bg2 fc3">
                   <div class="address-link-content flx75 pl32 min-h-272px">
@@ -473,7 +503,7 @@
             </div>
           </section>
           <section class="maps df jcsb">
-            <div class="google-map w100 box-center flx48">
+            <div class="google-map-ind w100 box-center flx48">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0552245887484!2d80.24558227678422!3d12.96831808234989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525de1ca048fcd%3A0x15f724c372ba8eed!2sPrince%20Infocity%20II!5e0!3m2!1sen!2sin!4v1697873475274!5m2!1sen!2sin"
                 width="100%"
@@ -484,7 +514,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-            <div class="google-map w100 box-center flx48">
+            <div class="google-map-us w100 box-center flx48">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6215240510223!2d-81.22237212021015!3d28.581125723759616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e76884a20539cb%3A0xc4d75b85419dc98d!2s10948%20Pinewood%20Cove%20Ln%2C%20Orlando%2C%20FL%2032817%2C%20USA!5e0!3m2!1sen!2sin!4v1697874133160!5m2!1sen!2sin"
                 width="100%"
@@ -507,7 +537,7 @@
               <h4 class="fs20 fc5 ttu fw5">About Us</h4>
               <p class="section-text fs15 fw5 lh34 fc2 fc-h2 mt16 pr40">
                 Prince Infocity II, 4 Floor, R.S.No: 289/4, Kottivakkam Village,
-                Rajiv Gandhi Salai, Kandanchavadi, Chennai, Tamil Nadu 600096
+                Rajiv Gandhi Salai, Kandanchavadi, Chennai, Tamil Nadu 600096
               </p>
               <div class="footer-social-icons df mt24">
                 <a href="#" class="box-center h24 w48 plr24 brd-r1">
@@ -655,22 +685,70 @@
         </symbol>
       </svg>
     </div>
+
     <script>
       const quickForm = document.querySelector(".quick-form-grp");
       const overlayBg = document.querySelector(".overlay-popup");
       const openPopup = () => {
         quickForm.classList.add("on-pop");
         overlayBg.classList.add("on-pop");
+        document.body.style.overflow = "hidden";
       };
       const closePopup = () => {
         quickForm.classList.remove("on-pop");
         overlayBg.classList.remove("on-pop");
+        document.body.style.overflow = "auto";
       };
       const submitPopup = (e) => {
         e.preventDefault();
         quickForm.classList.remove("on-pop");
         overlayBg.classList.remove("on-pop");
+        document.body.style.overflow = "auto";
       };
+
+      const menuButton = document.querySelector(".menu-btn");
+      const navBar = document.querySelector(".top-navbar");
+      menuButton.addEventListener("click", () => {
+        if (!navBar.classList.contains("nav-close")) {
+          navBar.classList.add("nav-close");
+        } else {
+          navBar.classList.remove("nav-close");
+        }
+      });
+    
+    </script>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+  ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("XYfyriVxuFq4GrBVb");
+      })();
+    </script>
+    <script>
+      // listen to the form submission
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const serviceID = "service_br2h6fb";
+          const templateID = "template_m10mcmd";
+
+          // send the email here
+          emailjs.sendForm(serviceID, templateID, this).then(
+            (response) => {
+              console.log("SUCCESS!", response.status, response.text);
+              // alert("SUCCESS!");
+              window.location.href = "thankyou.html";
+            },
+            (error) => {
+              console.log("FAILED...", error);
+              alert("FAILED...", error);
+            }
+          );
+        });
     </script>
   </body>
 </html>
